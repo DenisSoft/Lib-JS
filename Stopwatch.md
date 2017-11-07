@@ -12,6 +12,10 @@ class Stopwatch {
         this.times = [ 0, 0, 0 ];
     }
 
+    pause() {
+        this.running ? this.stop() : this.start();
+    }
+
     start() {
         if (!this.time) this.time = performance.now();
         if (!this.running) {
